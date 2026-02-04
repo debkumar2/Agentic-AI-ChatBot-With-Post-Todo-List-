@@ -1,14 +1,20 @@
-import React from 'react'
-import Parent from './components/Parent'
-
+import React from "react";
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Chatbot from "./components/Chatbot";
+import Todo from "./components/Todo";
 const App = () => {
   return (
     <div>
-      <Parent/>
-      
-        
+      <Navbar />
+      <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/chatbot" element={<Chatbot />} />
+        <Route path="/" element={<Todo />} />
+      </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
